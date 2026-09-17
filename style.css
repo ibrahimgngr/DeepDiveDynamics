@@ -675,7 +675,6 @@ footer {
         display: block;
     }
 
-    /* DÜZELTİLEN KISIM: Başlangıçta KESİNLİKLE gizler */
     nav#nav-menu {
         display: none !important;
         width: 100%;
@@ -696,6 +695,15 @@ footer {
     nav a {
         margin-left: 0 !important;
         font-size: 1.2rem !important;
+    }
+
+     #hero {
+        height: 80vh !important; 
+        
+        background-position: center center !important;
+        background-size: cover !important;
+        
+        background-attachment: scroll !important; 
     }
 
     #hero h1 {
