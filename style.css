@@ -144,7 +144,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(23, 33, 57, 0.5), rgba(23, 33, 57, 0.7)), url('images/araclar.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(23, 33, 57, 0.5), rgba(23, 33, 57, 0.7)), url('images/araclar/araclar_bagli.png') center/cover no-repeat;
 }
 
 #hero h1 {
@@ -423,7 +423,7 @@ section {
     text-align: center;
     margin-top: 80px;
     padding: 50px;
-    background: linear-gradient(rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.9)), url('images/araclar.jpeg') center/cover;
+    background: linear-gradient(rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.9)), url('images/aracalar/araclar_bagli.png') center/cover;
     border-radius: 8px;
     border: 1px solid rgba(0, 210, 255, 0.2);
 }
@@ -675,6 +675,7 @@ footer {
         display: block;
     }
 
+    /* DÜZELTİLEN KISIM: Başlangıçta KESİNLİKLE gizler */
     nav#nav-menu {
         display: none !important;
         width: 100%;
@@ -697,7 +698,7 @@ footer {
         font-size: 1.2rem !important;
     }
 
-     #hero {
+    #hero {
         height: 80vh !important; 
         
         background-position: center center !important;
