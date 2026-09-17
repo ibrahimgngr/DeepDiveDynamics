@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri | Deep Dive Dynamics</title>
+    <meta name="description" content="Deep Dive Dynamics - İnsansız Su Altı Sistemleri.">
+    <meta property="og:title" content="Deep Dive Dynamics">
+    <meta property="og:description"
+        content="İmkansızlıktan imkan yaratanların takımı. Geleceğin otonom su altı araçlarını tasarlıyoruz.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" sizes="192x192" href="images/logo_tek.png">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+    <div id="preloader">
+        <img src="images/logo.png" alt="Yükleniyor...">
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Deep Dive Dynamics Logo"></a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html" data-tr='<i class="fa-solid fa-house"></i> ANA SAYFA'
+                data-en='<i class="fa-solid fa-house"></i> HOME'><i class="fa-solid fa-house"></i> ANA SAYFA</a>
+            <a href="hakkimizda.html" data-tr="HAKKIMIZDA" data-en="ABOUT US">HAKKIMIZDA</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR8scqBRYS02zoFpXVMVBQeoAkeAK_aq12Xqm8TAhwSs1n3A/viewform"
+                target="_blank" data-tr="BİZE KATILIN" data-en="JOIN US">BİZE KATILIN</a>
+            <a href="sponsorlar.html" data-tr="SPONSORLUK" data-en="SPONSORSHIP">SPONSORLUK</a>
+            <a href="#" id="lang-toggle"><i class="fa-solid fa-globe"></i> EN</a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <section style="padding-top: 0; padding-bottom: 40px;">
+            <h2 class="section-title" style="text-transform: capitalize;" data-tr="Galeri" data-en="Gallery">Galeri</h2>
+            <p class="section-subtitle" style="margin-bottom: 10px;"
+                data-tr="Çalışmalarımız sırasında çektiğimiz fotoğrafları inceleyerek yolculuğumuza eşlik edin"
+                data-en="Accompany our journey by reviewing the photos we took during our works">Çalışmalarımız
+                sırasında çektiğimiz fotoğrafları inceleyerek yolculuğumuza eşlik edin</p>
+
+            <div class="gallery-grid">
+                <img src="images/galeri/galeri0.jpeg" alt="Galeri 0" class="gallery-img">
+                <img src="images/galeri/galeri1.jpeg" alt="Galeri 1" class="gallery-img">
+                <img src="images/galeri/galeri2.jpeg" alt="Galeri 2" class="gallery-img">
+                <img src="images/galeri/galeri3.jpeg" alt="Galeri 3" class="gallery-img">
+                <img src="images/galeri/galeri4.jpeg" alt="Galeri 4" class="gallery-img">
+                <img src="images/galeri/galeri5.jpeg" alt="Galeri 5" class="gallery-img">
+                <img src="images/galeri/galeri6.jpeg" alt="Galeri 6" class="gallery-img">
+                <img src="images/galeri/galeri7.jpeg" alt="Galeri 7" class="gallery-img">
+                <img src="images/galeri/galeri8.jpeg" alt="Galeri 8" class="gallery-img">
+                <img src="images/galeri/galeri9.jpeg" alt="Galeri 9" class="gallery-img">
+                <img src="images/galeri/galeri10.jpeg" alt="Galeri 10" class="gallery-img">
+                <img src="images/galeri/galeri11.jpeg" alt="Galeri 11" class="gallery-img">
+                <video src="images/galeri/video1.mp4" class="gallery-video" muted loop autoplay playsinline></video>
+            </div>
+        </section>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" style="display: none;">
+        <video class="lightbox-content" id="lightbox-video" controls style="display: none;"></video>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/deepdivedynamics/" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/deep-dive-dynamics-aba6392b6/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Copyright &copy; 2026 Deep Dive Dynamics</p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => { preloader.style.opacity = "0"; preloader.style.visibility = "hidden"; }, 1000);
+        });
+
+        // Hamburger Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenu.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+                }
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const galleryItems = document.querySelectorAll('.gallery-img, .gallery-video');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function () {
+                lightbox.style.display = 'block';
+                lightboxImg.style.display = 'none';
+                lightboxVideo.style.display = 'none';
+                if (this.tagName === 'IMG') {
+                    lightboxImg.src = this.src;
+                    lightboxImg.style.display = 'block';
+                } else if (this.tagName === 'VIDEO') {
+                    lightboxVideo.src = this.src || this.querySelector('source').src;
+                    lightboxVideo.style.display = 'block';
+                    lightboxVideo.play();
+                }
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            lightboxVideo.pause();
+            lightboxVideo.currentTime = 0;
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+        // Multi Language
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('[data-tr]');
+        let currentLang = localStorage.getItem('site_lang') || 'tr';
+        applyLanguage(currentLang);
+
+        if (langToggle) {
+            langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentLang = currentLang === 'tr' ? 'en' : 'tr';
+                localStorage.setItem('site_lang', currentLang);
+                applyLanguage(currentLang);
+            });
+        }
+
+        function applyLanguage(lang) {
+            if (lang === 'tr') {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> EN';
+            } else {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> TR';
+            }
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translation;
+                    else el.innerHTML = translation;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
