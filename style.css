@@ -33,9 +33,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999; 
+    z-index: 99999; /* Sayfadaki her şeyin kesinlikle üstünde kalmasını garantiler */
     transition: opacity 0.5s ease, visibility 0.5s ease; 
 }
+
 #preloader img {
     width: 350px;
     animation: pulse 1.5s infinite;
@@ -243,6 +244,11 @@ section {
 }
 
 /* Team Section */
+.team-member {
+    width: 240px !important;
+    max-width: 100%;
+}
+
 .team-member .card-content {
     text-align: center;
 }
@@ -266,54 +272,52 @@ section {
 .captain-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .captain-container .card {
-    width: 100%;
-    max-width: 280px;
+    width: 240px;
+    max-width: 100%;
 }
 
 .team-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 280px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
+    gap: 20px;
+    max-width: 780px;
+    margin: 0 auto 40px auto;
 }
 
 .team-otomatik {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
+    gap: 20px;
+    max-width: 1040px;
+    margin: 0 auto 60px auto;
 }
 
-.team-otomatik .card {
-    width: calc((100% - 75px) / 4);
-    max-width: 280px;
-}
-
-@media (max-width: 992px) {
-    .team-otomatik .card {
-        width: calc((100% - 25px) / 2);
+@media (max-width: 1100px) {
+    .team-otomatik {
+        max-width: 520px;
     }
-
     .team-grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+        max-width: 520px;
     }
 }
 
 @media (max-width: 576px) {
+    .team-member {
+        width: 100% !important;
+        max-width: 280px;
+    }
 
-    .team-otomatik .card,
-    .team-grid-3 {
-        grid-template-columns: 1fr;
-        width: 100%;
+    .team-grid-3,
+    .team-otomatik {
+        max-width: 100%;
     }
 }
-
 .link {
     display: inline-block;
     margin-top: 15px;
