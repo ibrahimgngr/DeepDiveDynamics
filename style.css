@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --bg-color: #0b0f19;
+    --surface-color: #26304b;
+    --surface-hover: #1e2538;
+    --accent-color: #00d2ff;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* =========================================
+   PRELOADER
+   ========================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color: var(--bg-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+}
+
+#preloader img {
+    width: 350px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* =========================================
+   HEADER & NAVBAR
+   ========================================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   GENEL BÖLÜM AYARLARI
+   ========================================= */
+.page-wrapper {
+    padding-top: 150px;
+    min-height: 80vh;
+}
+
+section {
+    padding: 100px 1% 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   HERO (ANA EKRAN)
+   ========================================= */
+#hero {
+    height: 100vh;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-color);
+    background: linear-gradient(rgba(23, 33, 57, 0.5), rgba(23, 33, 57, 0.7)), url('images/araclar/araclar_bagli.png') center/contain no-repeat;
+}
+
+#hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #000;
+    padding: 15px 40px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+}
+
+/* =========================================
+   GENEL KART SİSTEMİ (PROJELER, BAŞARILAR)
+   ========================================= */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.award-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.muted-text { color: var(--text-muted); }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: var(--surface-hover);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-content { padding: 25px; }
+.card-content h3 { font-size: 1.2rem; margin-bottom: 15px; color: var(--text-light); }
+.card-content p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* =========================================
+   HAKKIMIZDA & TAKIMIMIZ (İKİ SÜTUNLU TASARIM)
+   ========================================= */
+.split-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.split-image {
+    flex: 1; 
+    min-height: 350px;
+    margin-left: 20px;
+}
+
+.split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.split-content {
+    flex: 1; 
+    padding: 40px 50px 40px 0;
+    text-align: left;
+}
+
+.split-content h2 {
+    font-size: 2.2rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.split-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   SEÇİCİ TASARIMI (TAKIM VE ARAÇLAR İÇİN)
+   ========================================= */
+.choice-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.choice-btn {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.choice-btn:hover { color: var(--text-light); }
+.choice-btn.active { background-color: var(--accent-color); color: #000; }
+
+.team-choice-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.team-choice-content.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   ARAÇ İNFOGRAFİK TASARIMI (YENİ EKLENEN)
+   ========================================= */
+.vehicle-showcase {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 20px;
+    color: var(--text-light);
+}
+
+.vehicle-header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.vehicle-title-box { flex: 1; }
+.vehicle-main-title { font-size: 3rem; font-weight: 800; line-height: 1.1; color: var(--text-light); letter-spacing: -1px; }
+.vehicle-sub-title { font-size: 1.5rem; font-weight: 300; color: var(--text-muted); letter-spacing: 5px; margin: 10px 0 20px 0; }
+.vehicle-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; max-width: 300px; }
+
+.vehicle-vision-list { list-style: none; padding: 0; }
+.vehicle-vision-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.vehicle-vision-list i { font-size: 24px; color: var(--accent-color); width: 30px; text-align: center; }
+.vehicle-vision-list h4 { font-size: 1rem; margin-bottom: 2px; }
+.vehicle-vision-list p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+
+.vehicle-image-box { flex: 1.5; text-align: center; }
+.vehicle-image-box img { max-width: 100%; height: auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); }
+
+.vehicle-right-vision { flex: 0.8; text-align: right; font-weight: 300; letter-spacing: 2px; color: var(--text-muted); font-size: 1.2rem; line-height: 1.5; }
+.vehicle-right-vision p { margin-bottom: 15px; }
+.vehicle-right-vision .line-divider { height: 1px; width: 50px; background-color: var(--accent-color); margin: 20px 0 20px auto; }
+.vehicle-right-vision .small-vision { font-size: 0.9rem; letter-spacing: 4px; }
+
+.vehicle-specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 40px; }
+.spec-column { display: flex; flex-direction: column; gap: 20px; }
+.spec-item { display: flex; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.spec-item i { font-size: 20px; color: var(--accent-color); margin-top: 3px; }
+.spec-item h4 { font-size: 1.1rem; margin-bottom: 10px; color: var(--accent-color); }
+.spec-item ul { list-style: none; padding: 0; }
+.spec-item li { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; display: flex; align-items: center; }
+.spec-item li::before { content: "•"; color: var(--text-light); font-weight: bold; margin-right: 8px; }
+.spec-item li span { display: inline-block; width: 80px; }
+
+.vehicle-footer-slogan { text-align: right; margin-top: 40px; font-size: 0.7rem; letter-spacing: 5px; color: var(--text-muted); }
+
+/* =========================================
+   TAKIM KARTLARI BÖLÜMÜ
+   ========================================= */
+.team-member {
+    width: calc((100% - 60px) / 4) !important;
+    max-width: 240px;
+}
+
+.team-member .card-content { text-align: center; }
+.team-member .card-content p { color: var(--accent-color); font-weight: 600; }
+
+.team-member img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin: 25px auto 0;
+    display: block;
+    border: none;
+}
+
+.captain-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.captain-container .card {
+    width: 240px;
+    max-width: 100%;
+}
+
+.team-grid-3, 
+.team-otomatik {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1040px;
+    margin: 0 auto 60px auto;
+}
+
+.link { display: inline-block; margin-top: 15px; }
+.link i { font-size: 26px; color: #ffffff; transition: transform 0.3s, color 0.3s; }
+.link:hover i { color: #0077b5; transform: scale(1.2); }
+
+/* =========================================
+   İÇ SAYFALAR (Hakkımızda Detayları vb.)
+   ========================================= */
+.content-section { margin-bottom: 60px; }
+.content-section p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; }
+.content-title { color: var(--text-light); font-size: 1.8rem; margin-bottom: 20px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.info-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s;
+}
+
+.info-card:hover { transform: translateY(-5px); border-color: rgba(0, 210, 255, 0.3); }
+.info-card h3 { color: var(--accent-color); font-size: 1.4rem; margin-bottom: 15px; }
+
+.custom-list {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.custom-list li {
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+}
+
+.custom-list li::before {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.process-flow i { color: var(--accent-color); font-size: 1rem; }
+
+.visionary-ending {
+    text-align: center;
+    margin-top: 80px;
+    padding: 50px;
+    background: linear-gradient(rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.9)), url('images/araclar/araclar_bagli.png') center/cover;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.visionary-ending p { color: var(--text-light); font-size: 1.5rem; font-weight: 300; margin-bottom: 10px; }
+.visionary-ending h3 { color: var(--accent-color); font-size: 2.5rem; margin-top: 30px; letter-spacing: 1px; }
+
+/* =========================================
+   SPONSORLUK & İLETİŞİM FORMU
+   ========================================= */
+.sponsor-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sponsor-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2); }
+.sponsor-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.divider { width: 100%; height: 1px; background: rgba(255, 255, 255, 0.05); margin: 60px 0; }
+
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-left, .form-right { display: flex; flex-direction: column; gap: 15px; }
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--accent-color); }
+.contact-form select option { background-color: var(--surface-color); color: var(--text-light); }
+.contact-form textarea { height: 100%; min-height: 200px; resize: none; }
+.submit-btn { grid-column: 1 / -1; border: none; cursor: pointer; font-size: 1.1rem; padding: 18px; text-transform: uppercase; }
+
+/* =========================================
+   GALERİ & LIGHTBOX
+   ========================================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.gallery-img, .gallery-video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-img:hover, .gallery-video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+    border-color: rgba(0, 210, 255, 0.4);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    margin-top: 5vh;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: var(--text-light);
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover { color: var(--accent-color); }
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-socials { margin-bottom: 15px; }
+
+.footer-socials a {
+    color: var(--text-muted);
+    font-size: 1.6rem;
+    margin: 0 12px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.footer-socials a:hover { transform: scale(1.2); }
+.footer-socials a:hover .fa-instagram { color: #E1306C; }
+.footer-socials a:hover .fa-linkedin { color: #0077b5; }
+
+
+/* =========================================
+   ORTA BOY EKRAN (TABLET & LAPTOP) UYUMU
+   ========================================= */
+@media (max-width: 992px) {
+    /* Galeri */
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    /* Takım 2'li düzen */
+    .team-member {
+        width: calc((100% - 20px) / 2) !important;
+        max-width: 280px;
+    }
+    
+    /* Bölünmüş Düzeni Alt Alta Al */
+    .split-section { flex-direction: column; gap: 0; }
+    .split-image { width: 100%; min-height: 250px; }
+    .split-content { padding: 30px; text-align: center; }
+
+    /* Araç İnfografik 992px Uyumu */
+    .vehicle-header-grid { flex-direction: column; text-align: center; }
+    .vehicle-title-box, .vehicle-image-box, .vehicle-right-vision { flex: none; width: 100%; }
+    .vehicle-desc { max-width: 100%; margin: 0 auto 30px; }
+    .vehicle-vision-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .vehicle-vision-list li { flex-direction: column; text-align: center; }
+    .vehicle-right-vision { text-align: center; margin-top: 30px; }
+    .vehicle-right-vision .line-divider { margin: 20px auto; }
+    .vehicle-specs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =========================================
+   MOBİL (TELEFON) UYUMU (RESPONSIVE)
+   ========================================= */
+@media (max-width: 768px) {
+    #preloader img { width: 80%; }
+
+    /* Menü Ayarları */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+
+    .menu-toggle { display: block; }
+
+    nav#nav-menu {
+        display: none !important;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(11, 15, 25, 0.98);
+        padding: 20px 0;
+        margin-top: 15px;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav#nav-menu.active { display: flex !important; }
+    nav a { margin-left: 0 !important; font-size: 1.2rem !important; }
+
+    /* Hero Ayarları */
+    #hero {
+        height: 80vh !important; 
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important; 
+    }
+    #hero h1 { font-size: 2.8rem !important; letter-spacing: -1px !important; }
+    #hero p { font-size: 1.1rem !important; padding: 0 10px; }
+
+    .section-title { font-size: 1.8rem; }
+    .section-subtitle { font-size: 0.95rem; margin-bottom: 30px; }
+
+    .award-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 25px !important;
+    }
+
+    .contact-form { grid-template-columns: 1fr; }
+    .contact-form textarea { height: 150px; }
+    
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Araç İnfografik 768px Uyumu */
+    .vehicle-specs-grid { grid-template-columns: 1fr; }
+    .vehicle-main-title { font-size: 2.2rem; }
+}
+
+/* =========================================
+   DAR EKRAN MOBİL (KÜÇÜK TELEFONLAR)
+   ========================================= */
+@media (max-width: 576px) {
+    /* Takım Tekli Düzen */
+    .team-member { 
+        width: 100% !important; 
+        max-width: 280px; 
+    }
+    .team-grid-3, .team-otomatik { max-width: 100%; }
+    
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

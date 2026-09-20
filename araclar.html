@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araçlarımız | Deep Dive Dynamics</title>
+    <meta name="description" content="Deep Dive Dynamics - İnsansız Su Altı Sistemleri.">
+    <meta property="og:title" content="Deep Dive Dynamics">
+    <meta property="og:description"
+        content="İmkansızlıktan imkan yaratanların takımı. Geleceğin otonom su altı araçlarını tasarlıyoruz.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" sizes="192x192" href="images/logo_tek.png">
+    <link rel="stylesheet" href="style.css?v=6">
+</head>
+
+<body>
+    <div id="preloader">
+        <img src="images/logo.png" alt="Yükleniyor...">
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Deep Dive Dynamics Logo">
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html" data-tr='<i class="fa-solid fa-house"></i> ANA SAYFA'
+                data-en='<i class="fa-solid fa-house"></i> HOME'><i class="fa-solid fa-house"></i> ANA SAYFA</a>
+            <a href="hakkimizda.html" data-tr="HAKKIMIZDA" data-en="ABOUT US">HAKKIMIZDA</a>
+            <a href="takimimiz.html" data-tr="TAKIMIMIZ" data-en="OUR TEAM">TAKIMIMIZ</a>
+            <a href="galeri.html" data-tr="GALERİ" data-en="GALLERY">GALERİ</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR8scqBRYS02zoFpXVMVBQeoAkeAK_aq12Xqm8TAhwSs1n3A/viewform"
+                target="_blank" data-tr="BİZE KATILIN" data-en="JOIN US">BİZE KATILIN</a>
+            <a href="sponsorlar.html" data-tr="SPONSORLUK" data-en="SPONSORSHIP">SPONSORLUK</a>
+            <a href="#" id="lang-toggle">
+                <i class="fa-solid fa-globe"></i> EN
+            </a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <section id="araclar" style="padding-top: 0;">
+            <h1 class="section-title" data-tr="ARAÇLARIMIZ" data-en="OUR VEHICLES">ARAÇLARIMIZ</h1>
+
+            <!-- ARAÇ SEÇİCİ MENÜ -->
+            <div class="choice-selector">
+                <button class="choice-btn active" data-target="AnaRov">Ana Araç</button>
+                <button class="choice-btn" data-target="MiniRov">Mini ROV</button>
+            </div>
+
+            <!-- =========================================
+                 ANA ARAÇ KISMI (AKTİF OLAN)
+                 ========================================= -->
+            <div id="AnaRov" class="team-choice-content active">
+                <div class="vehicle-showcase">
+                    <!-- Üst Kısım: Başlık, Araç Görseli ve Vizyon Yazıları -->
+                    <div class="vehicle-header-grid">
+                        <!-- Sol: Başlık ve Açıklama -->
+                        <div class="vehicle-title-box">
+                            <h2 class="vehicle-main-title">DEEP DIVE<br>DYNAMICS</h2>
+                            <h3 class="vehicle-sub-title" data-tr="ANA ARAÇ" data-en="MAIN VEHICLE">ANA ARAÇ</h3>
+                            <p class="vehicle-desc"
+                                data-tr="Zorlu sualtı görevleri için tasarlanmış, yüksek manevra kabiliyetine sahip, modüler ve güvenilir insansız sualtı aracı."
+                                data-en="Designed for challenging underwater missions, highly maneuverable, modular and reliable unmanned underwater vehicle.">
+                                Zorlu sualtı görevleri için tasarlanmış, yüksek manevra kabiliyetine sahip, modüler ve
+                                güvenilir insansız sualtı aracı.</p>
+
+                            <ul class="vehicle-vision-list">
+                                <li>
+                                    <i class="fa-solid fa-crosshairs"></i>
+                                    <div>
+                                        <h4 data-tr="KEŞFET" data-en="EXPLORE">KEŞFET</h4>
+                                        <p data-tr="Daha derine" data-en="Deeper">Daha derine</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <div>
+                                        <h4 data-tr="GELİŞTİR" data-en="DEVELOP">GELİŞTİR</h4>
+                                        <p data-tr="Daha ileriye" data-en="Further">Daha ileriye</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-water"></i>
+                                    <div>
+                                        <h4 data-tr="TANI" data-en="RECOGNIZE">TANI</h4>
+                                        <p data-tr="Sualtı dünyasını" data-en="Underwater world">Sualtı dünyasını</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Orta: Araç Görseli -->
+                        <div class="vehicle-image-box">
+                            <img src="images/araclar/ana-arac-render.png" alt="Ana Araç 3D Render">
+                        </div>
+
+                        <!-- Sağ: Sağ Vizyon Yazıları -->
+                        <div class="vehicle-right-vision">
+                            <p data-tr="DAHA<br>DERİN" data-en="DEEPER">DAHA<br>DERİN</p>
+                            <p data-tr="DAHA<br>FAZLA<br>POTANSİYEL" data-en="MORE<br>POTENTIAL">
+                                DAHA<br>FAZLA<br>POTANSİYEL</p>
+                            <div class="line-divider"></div>
+                            <p class="small-vision" data-tr="SUALTINDA<br>DAHA İYİ<br>YARINLAR"
+                                data-en="BETTER<br>TOMORROWS<br>UNDERWATER">SUALTINDA<br>DAHA İYİ<br>YARINLAR</p>
+                        </div>
+                    </div>
+
+                    <!-- Alt Kısım: Teknik Özellikler Grid (3 Sütunlu) -->
+                    <div class="vehicle-specs-grid">
+                        <!-- Sütun 1 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                                <div>
+                                    <h4 data-tr="Fiziksel Özellikler" data-en="Physical Properties">Fiziksel Özellikler
+                                    </h4>
+                                    <ul>
+                                        <li><span>Genişlik:</span> 560.57 mm</li>
+                                        <li><span>Uzunluk:</span> 500 mm</li>
+                                        <li><span>Yükseklik:</span> 270.99 mm</li>
+                                        <li><span>Ağırlık:</span> 7989.06 g</li>
+                                        <li><span>Sistem Durumu:</span> <span data-tr="Ana araç"
+                                                data-en="Main vehicle">Ana araç</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                                <div>
+                                    <h4 data-tr="Hareket Kabiliyeti" data-en="Maneuverability">Hareket Kabiliyeti</h4>
+                                    <ul>
+                                        <li data-tr="6 adet itici motor" data-en="6 thrusters">6 adet itici motor</li>
+                                        <li data-tr="Çok yönlü manevra" data-en="Omnidirectional maneuver">Çok yönlü
+                                            manevra</li>
+                                        <li data-tr="Otonom hareket kabiliyeti" data-en="Autonomous movement">Otonom
+                                            hareket kabiliyeti</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-microchip"></i>
+                                <div>
+                                    <h4 data-tr="İşlemci ve Kontrol" data-en="Processor and Control">İşlemci ve Kontrol
+                                    </h4>
+                                    <ul>
+                                        <li>NVIDIA Jetson Nano</li>
+                                        <li>Pixhawk 4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sütun 2 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-wifi"></i>
+                                <div>
+                                    <h4 data-tr="Sensörler" data-en="Sensors">Sensörler</h4>
+                                    <ul>
+                                        <li>BNO055 IMU</li>
+                                        <li data-tr="DYP-L08 mesafe sensörü" data-en="DYP-L08 distance sensor">DYP-L08
+                                            mesafe sensörü</li>
+                                        <li data-tr="D300 derinlik sensörü" data-en="D300 depth sensor">D300 derinlik
+                                            sensörü</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-camera"></i>
+                                <div>
+                                    <h4 data-tr="Görüntüleme" data-en="Imaging">Görüntüleme</h4>
+                                    <ul>
+                                        <li>Low Light USB Kamera</li>
+                                        <li data-tr="Ön görüş odaklı kullanım" data-en="Front view focused use">Ön görüş
+                                            odaklı kullanım</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-fan"></i>
+                                <div>
+                                    <h4 data-tr="Tahrik Sistemi" data-en="Propulsion System">Tahrik Sistemi</h4>
+                                    <ul>
+                                        <li>G350 motorlar</li>
+                                        <li>Letna Marine 40A ESC</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sütun 3 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-bolt"></i>
+                                <div>
+                                    <h4 data-tr="Güç ve Elektronik" data-en="Power and Electronics">Güç ve Elektronik
+                                    </h4>
+                                    <ul>
+                                        <li>4S6P batarya paketi</li>
+                                        <li data-tr="3DEB-2.0 güç dağıtım kartı"
+                                            data-en="3DEB-2.0 power distribution board">3DEB-2.0 güç dağıtım kartı</li>
+                                        <li>100A BMS</li>
+                                        <li data-tr="Uzaktan kumandalı röle" data-en="Remote controlled relay">Uzaktan
+                                            kumandalı röle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-cube"></i>
+                                <div>
+                                    <h4 data-tr="Yapısal Özellikler" data-en="Structural Features">Yapısal Özellikler
+                                    </h4>
+                                    <ul>
+                                        <li data-tr="Alüminyum 5083 şasi" data-en="Aluminum 5083 chassis">Alüminyum 5083
+                                            şasi</li>
+                                        <li data-tr="Üst şeffaf sızdırmaz hazne"
+                                            data-en="Upper transparent sealed chamber">Üst şeffaf sızdırmaz hazne</li>
+                                        <li data-tr="Alt modüler gövde yapısı" data-en="Lower modular body structure">
+                                            Alt modüler gövde yapısı</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alt Slogan -->
+                    <div class="vehicle-footer-slogan">
+                        <span data-tr="TEKNOLOJİ | ARAŞTIRMA | DAHA TEMİZ DENİZLER"
+                            data-en="TECHNOLOGY | RESEARCH | CLEANER SEAS">TEKNOLOJİ | ARAŞTIRMA | DAHA TEMİZ
+                            DENİZLER</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================
+                 MINI ROV KISMI (GİZLİ BAŞLAR)
+                 ========================================= -->
+            <div id="MiniRov" class="team-choice-content">
+                <div class="vehicle-showcase">
+                    <!-- Üst Kısım: Başlık, Araç Görseli ve Vizyon Yazıları -->
+                    <div class="vehicle-header-grid">
+                        <!-- Sol: Başlık ve Açıklama -->
+                        <div class="vehicle-title-box">
+                            <h2 class="vehicle-main-title">DEEP DIVE<br>DYNAMICS</h2>
+                            <h3 class="vehicle-sub-title" data-tr="MİNİ ROV" data-en="MINI ROV">MİNİ ROV</h3>
+                            <p class="vehicle-desc"
+                                data-tr="Kompakt yapısı, yüksek manevra kabiliyetine sahip ve modüler tasarımıyla dar alanlarda çalışmak için geliştirilmiş, güvenilir insansız sualtı aracı."
+                                data-en="Reliable unmanned underwater vehicle developed to work in narrow spaces with its compact structure, high maneuverability and modular design.">
+                                Kompakt yapısı, yüksek manevra kabiliyeti ve modüler tasarımıyla dar alanlarda çalışmak
+                                için geliştirilmiş, güvenilir insansız sualtı aracı.</p>
+
+                            <ul class="vehicle-vision-list">
+                                <li>
+                                    <i class="fa-solid fa-crosshairs"></i>
+                                    <div>
+                                        <h4 data-tr="KEŞFET" data-en="EXPLORE">KEŞFET</h4>
+                                        <p data-tr="Daha yakına" data-en="Closer">Daha yakına</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <div>
+                                        <h4 data-tr="GELİŞTİR" data-en="DEVELOP">GELİŞTİR</h4>
+                                        <p data-tr="Daha akıllı" data-en="Smarter">Daha akıllı</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-water"></i>
+                                    <div>
+                                        <h4 data-tr="TANI" data-en="RECOGNIZE">TANI</h4>
+                                        <p data-tr="Sualtı detaylarını" data-en="Underwater details">Sualtı detaylarını
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Orta: Araç Görseli -->
+                        <div class="vehicle-image-box">
+                            <!-- Mini ROV görselini images/araclar klasörüne bu isimle eklemelisin -->
+                            <img src="images/araclar/mini-rov-render.png" alt="Mini ROV 3D Render">
+                        </div>
+
+                        <!-- Sağ: Sağ Vizyon Yazıları -->
+                        <div class="vehicle-right-vision">
+                            <p data-tr="DAHA<br>DERİN" data-en="DEEPER">DAHA<br>DERİN</p>
+                            <p data-tr="DAHA<br>FAZLA<br>POTANSİYEL" data-en="MORE<br>POTENTIAL">
+                                DAHA<br>FAZLA<br>POTANSİYEL</p>
+                            <div class="line-divider"></div>
+                            <p class="small-vision" data-tr="SUALTINDA<br>DAHA İYİ<br>YARINLAR"
+                                data-en="BETTER<br>TOMORROWS<br>UNDERWATER">SUALTINDA<br>DAHA İYİ<br>YARINLAR</p>
+                        </div>
+                    </div>
+
+                    <!-- Alt Kısım: Teknik Özellikler Grid (3 Sütunlu) -->
+                    <div class="vehicle-specs-grid">
+                        <!-- Sütun 1 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                                <div>
+                                    <h4 data-tr="Fiziksel Özellikler" data-en="Physical Properties">Fiziksel Özellikler
+                                    </h4>
+                                    <ul>
+                                        <li><span>Genişlik:</span> 442.26 mm</li>
+                                        <li><span>Uzunluk:</span> 366.07 mm</li>
+                                        <li><span>Yükseklik:</span> 202 mm</li>
+                                        <li><span>Ağırlık:</span> 6147.15 g</li>
+                                        <li><span>Sistem Durumu:</span> Mini ROV</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                                <div>
+                                    <h4 data-tr="Hareket Kabiliyeti" data-en="Maneuverability">Hareket Kabiliyeti</h4>
+                                    <ul>
+                                        <li data-tr="6 adet itici motor" data-en="6 thrusters">6 adet itici motor</li>
+                                        <li data-tr="Dar alanlarda manevra" data-en="Maneuver in narrow spaces">Dar
+                                            alanlarda manevra</li>
+                                        <li data-tr="Hassas yönlendirme" data-en="Precise steering">Hassas yönlendirme
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-microchip"></i>
+                                <div>
+                                    <h4 data-tr="İşlemci ve Kontrol" data-en="Processor and Control">İşlemci ve Kontrol
+                                    </h4>
+                                    <ul>
+                                        <li>Raspberry Pi 4</li>
+                                        <li>Pixhawk 4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sütun 2 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-wifi"></i>
+                                <div>
+                                    <h4 data-tr="Sensörler" data-en="Sensors">Sensörler</h4>
+                                    <ul>
+                                        <li>BNO055 IMU</li>
+                                        <li data-tr="DYP-L08 mesafe sensörü" data-en="DYP-L08 distance sensor">DYP-L08
+                                            mesafe sensörü</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-camera"></i>
+                                <div>
+                                    <h4 data-tr="Görüntüleme" data-en="Imaging">Görüntüleme</h4>
+                                    <ul>
+                                        <li>IMX219-200 kamera</li>
+                                        <li data-tr="Kapalı alan inceleme ve hat takibi"
+                                            data-en="Closed area inspection and line tracking">Kapalı alan inceleme ve
+                                            hat takibi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-fan"></i>
+                                <div>
+                                    <h4 data-tr="Tahrik Sistemi" data-en="Propulsion System">Tahrik Sistemi</h4>
+                                    <ul>
+                                        <li data-tr="Hazır BLDC motorlar" data-en="Standard BLDC motors">Hazır BLDC
+                                            motorlar</li>
+                                        <li>Letna Marine 40A ESC</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sütun 3 -->
+                        <div class="spec-column">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-bolt"></i>
+                                <div>
+                                    <h4 data-tr="Güç ve Elektronik" data-en="Power and Electronics">Güç ve Elektronik
+                                    </h4>
+                                    <ul>
+                                        <li>4S5P batarya paketi</li>
+                                        <li data-tr="3DEB-2.0 güç dağıtım kartı"
+                                            data-en="3DEB-2.0 power distribution board">3DEB-2.0 güç dağıtım kartı</li>
+                                        <li>100A BMS</li>
+                                        <li data-tr="Uzaktan kumandalı röle" data-en="Remote controlled relay">Uzaktan
+                                            kumandalı röle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="spec-item" style="border-bottom:none;">
+                                <i class="fa-solid fa-cube"></i>
+                                <div>
+                                    <h4 data-tr="Yapısal Özellikler" data-en="Structural Features">Yapısal Özellikler
+                                    </h4>
+                                    <ul>
+                                        <li data-tr="Alüminyum 5083 kapaklar" data-en="Aluminum 5083 covers">Alüminyum
+                                            5083 kapaklar</li>
+                                        <li data-tr="150 mm dış çaplı sızdırmaz hazne"
+                                            data-en="150 mm outer diameter sealed chamber">150 mm dış çaplı sızdırmaz
+                                            hazne</li>
+                                        <li data-tr="Kompakt ve modüler gövde" data-en="Compact and modular body">
+                                            Kompakt ve modüler gövde</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alt Slogan -->
+                    <div class="vehicle-footer-slogan">
+                        <span data-tr="TEKNOLOJİ | ARAŞTIRMA | DAHA TEMİZ DENİZLER"
+                            data-en="TECHNOLOGY | RESEARCH | CLEANER SEAS">TEKNOLOJİ | ARAŞTIRMA | DAHA TEMİZ
+                            DENİZLER</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/deepdivedynamics/" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/deep-dive-dynamics-aba6392b6/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Copyright &copy; 2026 Deep Dive Dynamics</p>
+    </footer>
+
+    <script>
+        // Yükleme Ekranı
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => { preloader.style.opacity = "0"; preloader.style.visibility = "hidden"; }, 1000);
+        });
+
+        // Hamburger Menü
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenu.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+                }
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        // =========================================
+        // SEÇENEK SEÇİCİ (FİLTRELEME) MANTIĞI
+        // =========================================
+        const choiceBtns = document.querySelectorAll('.choice-btn');
+        const choiceContents = document.querySelectorAll('.team-choice-content');
+
+        if (choiceBtns.length > 0) {
+            choiceBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Tüm butonları ve içerikleri pasife al
+                    choiceBtns.forEach(b => b.classList.remove('active'));
+                    choiceContents.forEach(content => content.classList.remove('active'));
+
+                    // Tıklanan butonu ve hedef içeriği aktif yap
+                    btn.classList.add('active');
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        }
+
+        // Çoklu Dil Motoru
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('[data-tr]');
+        let currentLang = localStorage.getItem('site_lang') || 'tr';
+        applyLanguage(currentLang);
+
+        if (langToggle) {
+            langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentLang = currentLang === 'tr' ? 'en' : 'tr';
+                localStorage.setItem('site_lang', currentLang);
+                applyLanguage(currentLang);
+            });
+        }
+
+        function applyLanguage(lang) {
+            if (lang === 'tr') {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> EN';
+            } else {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> TR';
+            }
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.placeholder = translation; }
+                    else { el.innerHTML = translation; }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

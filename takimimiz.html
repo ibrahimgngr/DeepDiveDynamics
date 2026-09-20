@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takımımız | Deep Dive Dynamics</title>
+    <meta name="description" content="Deep Dive Dynamics - İnsansız Su Altı Sistemleri.">
+    <meta property="og:title" content="Deep Dive Dynamics">
+    <meta property="og:description"
+        content="İmkansızlıktan imkan yaratanların takımı. Geleceğin otonom su altı araçlarını tasarlıyoruz.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" sizes="192x192" href="images/logo_tek.png">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+    <div id="preloader">
+        <img src="images/logo.png" alt="Yükleniyor...">
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Deep Dive Dynamics Logo">
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html" data-tr='<i class="fa-solid fa-house"></i> ANA SAYFA'
+                data-en='<i class="fa-solid fa-house"></i> HOME'><i class="fa-solid fa-house"></i> ANA SAYFA</a>
+             <a href="araclar.html" data-tr="ARAÇLAR" data-en="VEHICLES">ARAÇLAR</a>
+            <a href="hakkimizda.html" data-tr="HAKKIMIZDA" data-en="ABOUT US">HAKKIMIZDA</a>
+            <a href="galeri.html" data-tr="GALERİ" data-en="GALLERY">GALERİ</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR8scqBRYS02zoFpXVMVBQeoAkeAK_aq12Xqm8TAhwSs1n3A/viewform"
+                target="_blank" data-tr="BİZE KATILIN" data-en="JOIN US">BİZE KATILIN</a>
+            <a href="sponsorlar.html" data-tr="SPONSORLUK" data-en="SPONSORSHIP">SPONSORLUK</a>
+            <a href="#" id="lang-toggle">
+                <i class="fa-solid fa-globe"></i> EN
+            </a>
+            </a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <section id="takim" style="padding-top: 0;">
+            <h1 class="section-title" data-tr="TAKIMIMIZ" data-en="OUR TEAM">TAKIMIMIZ</h1>
+            <p class="section-subtitle" data-tr="Deep Dive Dynamics Kadrosu" data-en="Deep Dive Dynamics Roster">Deep
+                Dive
+                Dynamics Kadrosu</p>
+
+            <!-- SEZON SEÇİCİ MENÜ -->
+            <div class="choice-selector">
+                <button class="choice-btn active" data-target="sezon-2027">2026/2027</button>
+                <button class="choice-btn" data-target="sezon-2026">2025/2026</button>
+            </div>
+
+            <!-- =========================================
+                 2026/2027 KADROSU (AKTİF OLAN)
+                 ========================================= -->
+            <div id="sezon-2027" class="team-choice-content active">
+
+                <div class="captain-container">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/mehmet-alperen-sabul-kaptan.jpeg" alt="Takım Kaptanı">
+                        <div class="card-content">
+                            <h3>Mehmet Alperen ŞABUL</h3>
+                            <p data-tr="Takım Kaptanı" data-en="Team Captain">Takım Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/mehmet-alperen-şabul-785bb7253/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-grid-3">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/yasin-dirmikci-yazilim-kaptan.jpeg" alt="Yasin Dırmıkcı">
+                        <div class="card-content">
+                            <h3>Yasin DIRMIKCI</h3>
+                            <p data-tr="Yazılım Kaptanı" data-en="Software Captain">Yazılım Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/yasindirmikci/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/yigit-emre-cigdem-elektronik-kaptan.png"
+                            alt="Yiğit Emre Çiğdem">
+                        <div class="card-content">
+                            <h3>Yiğit Emre ÇİĞDEM</h3>
+                            <p data-tr="Elektronik Kaptanı" data-en="Electronics Captain">Elektronik Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/yiğit-emre-çiğdem-40b673361/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/tolga-avci-mekanik-kaptan.png" alt="Tolga Avcı">
+                        <div class="card-content">
+                            <h3>Tolga AVCI</h3>
+                            <p data-tr="Mekanik Kaptanı" data-en="Mechanics Captain">Mekanik Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/tolga-avci-83639a39a/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-otomatik">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/ibrahim-gungor-yazilim.jpg" alt="İbrahim Güngör">
+                        <div class="card-content">
+                            <h3>İbrahim GÜNGÖR</h3>
+                            <p data-tr="Yazılım Birim Üyesi" data-en="Software Unit Member">Yazılım Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/ibrahimgngr/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/naz-konak-yazilim.jpg" alt="Naz Konak">
+                        <div class="card-content">
+                            <h3>Naz KONAK</h3>
+                            <p data-tr="Yazılım Birim Üyesi" data-en="Software Unit Member">Yazılım Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/naz-konak/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/busra-ozcan-mekanik.jpeg" alt="Büşra Özcan">
+                        <div class="card-content">
+                            <h3>Büşra ÖZCAN</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/büşra-özcan-aa15b8297/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/yusuf-emre-battal-mekanik.png" alt="Yusuf Emre Battal">
+                        <div class="card-content">
+                            <h3>Yusuf Emre BATTAL</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/yusuf-emre-battal-797726336/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/yusuf-sucu-mekanik.jpeg" alt="Yusuf Sucu">
+                        <div class="card-content">
+                            <h3>Yusuf SUCU</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/yusuf-sucu-60a939411/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/ahmet-akcan-mekanik.png" alt="Ahmet Akcan">
+                        <div class="card-content">
+                            <h3>Ahmet AKCAN</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/ahmet-akcan-17-makmüh/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/eslem-sponsorluk.jpeg" alt="Eslem Gülşen">
+                        <div class="card-content">
+                            <h3>Eslem GÜLŞEN</h3>
+                            <p data-tr="Sponsorluk Birim Üyesi" data-en="Sponsorship Unit Member">Sponsorluk Birim Üyesi
+                            </p>
+                            <a href="https://www.linkedin.com/in/eslemgulsen/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/sila-tavus-sponsorluk.png" alt="Sıla Tavus">
+                        <div class="card-content">
+                            <h3>Sıla TAVUS</h3>
+                            <p data-tr="Sponsorluk Birim Üyesi" data-en="Sponsorship Unit Member">Sponsorluk Birim Üyesi
+                            </p>
+                            <a href="https://www.linkedin.com/in/sıla-tavus-08538030a/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2026-2027/sezai-sosyal-medya.png" alt="Sezai Kağan Topcuoğlu">
+                        <div class="card-content">
+                            <h3>Sezai Kağan TOPCUOĞLU</h3>
+                            <p data-tr="Sosyal Medya Birim Üyesi" data-en="Social Media Unit Member">Sosyal Medya Birim
+                                Üyesi
+                            </p>
+                            <a href="https://www.linkedin.com/in/sezai-kagan/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================
+                 2025/2026 KADROSU
+                 ========================================= -->
+            <div id="sezon-2026" class="team-choice-content">
+                <div class="captain-container">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/mehmet-alperen-sabul-kaptan.jpeg" alt="Takım Kaptanı">
+                        <div class="card-content">
+                            <h3>Mehmet Alperen ŞABUL</h3>
+                            <p data-tr="Takım Kaptanı" data-en="Team Captain">Takım Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/mehmet-alperen-şabul-785bb7253/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-grid-3">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/yasin-dirmikci-yazilim-kaptan.jpeg" alt="Yasin Dırmıkcı">
+                        <div class="card-content">
+                            <h3>Yasin DIRMIKCI</h3>
+                            <p data-tr="Yazılım Kaptanı" data-en="Software Captain">Yazılım Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/yasindirmikci/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/burak-oz-elektronik-kaptan.png" alt="Burak Öz">
+                        <div class="card-content">
+                            <h3>Burak ÖZ</h3>
+                            <p data-tr="Elektronik Kaptanı" data-en="Electronics Captain">Elektronik Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/burak-öz-01b103294/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/tolga-avci-mekanik-kaptan.png" alt="Tolga Avcı">
+                        <div class="card-content">
+                            <h3>Tolga AVCI</h3>
+                            <p data-tr="Mekanik Kaptanı" data-en="Mechanics Captain">Mekanik Kaptanı</p>
+                            <a href="https://www.linkedin.com/in/tolga-avci-83639a39a/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-otomatik">
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/ibrahim-gungor-yazilim.jpg" alt="İbrahim Güngör">
+                        <div class="card-content">
+                            <h3>İbrahim GÜNGÖR</h3>
+                            <p data-tr="Yazılım Birim Üyesi" data-en="Software Unit Member">Yazılım Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/ibrahimgngr/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/naz-konak-yazilim.jpg" alt="Naz Konak">
+                        <div class="card-content">
+                            <h3>Naz KONAK</h3>
+                            <p data-tr="Yazılım Birim Üyesi" data-en="Software Unit Member">Yazılım Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/naz-konak/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/yigit-emre-cigdem-elektronik.png" alt="Yiğit Emre Çiğdem">
+                        <div class="card-content">
+                            <h3>Yiğit Emre ÇİĞDEM</h3>
+                            <p data-tr="Elektronik Birim Üyesi" data-en="Electronics Unit Member">Elektronik Birim Üyesi
+                            </p>
+                            <a href="https://www.linkedin.com/in/yiğit-emre-çiğdem-40b673361/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/bora-calik-elektronik.png" alt="Bora Çalık">
+                        <div class="card-content">
+                            <h3>Bora ÇALIK</h3>
+                            <p data-tr="Elektronik Birim Üyesi" data-en="Electronics Unit Member">Elektronik Birim Üyesi
+                            </p>
+                            <a href="https://www.linkedin.com/in/boraclk12/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/busra-ozcan-mekanik.jpeg" alt="Büşra Özcan">
+                        <div class="card-content">
+                            <h3>Büşra ÖZCAN</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/büşra-özcan-aa15b8297/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/yusuf-emre-battal-mekanik.png" alt="Yusuf Emre Battal">
+                        <div class="card-content">
+                            <h3>Yusuf Emre BATTAL</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/yusuf-emre-battal-797726336/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/yusuf-sucu-mekanik.jpeg" alt="Yusuf Sucu">
+                        <div class="card-content">
+                            <h3>Yusuf SUCU</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/yusuf-sucu-60a939411/" target="_blank" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="card team-member">
+                        <img src="images/ekibimiz/2025-2026/zeynep-sirin-mekanik.jpg" alt="Zeynep Şirin">
+                        <div class="card-content">
+                            <h3>Zeynep ŞİRİN</h3>
+                            <p data-tr="Mekanik Birim Üyesi" data-en="Mechanics Unit Member">Mekanik Birim Üyesi</p>
+                            <a href="https://www.linkedin.com/in/zeynep-şirin-b4276b246/" target="_blank"
+                                class="link"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/deepdivedynamics/" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/deep-dive-dynamics-aba6392b6/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Copyright &copy; 2026 Deep Dive Dynamics</p>
+    </footer>
+
+    <script>
+        // Yükleme Ekranı
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => { preloader.style.opacity = "0"; preloader.style.visibility = "hidden"; }, 1000);
+        });
+
+        // Hamburger Menü
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenu.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+                }
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        // =========================================
+        // SEZON SEÇİCİ (TAKIM FİLTRELEME) MANTIĞI
+        // =========================================
+        const choiceBtns = document.querySelectorAll('.choice-btn');
+        const choiceContents = document.querySelectorAll('.team-choice-content');
+
+        if (choiceBtns.length > 0) {
+            choiceBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Tüm butonları ve içerikleri pasife al
+                    choiceBtns.forEach(b => b.classList.remove('active'));
+                    choiceContents.forEach(content => content.classList.remove('active'));
+
+                    // Tıklanan butonu ve hedef içeriği aktif yap
+                    btn.classList.add('active');
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        }
+
+        // Çoklu Dil Motoru
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('[data-tr]');
+        let currentLang = localStorage.getItem('site_lang') || 'tr';
+        applyLanguage(currentLang);
+
+        if (langToggle) {
+            langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentLang = currentLang === 'tr' ? 'en' : 'tr';
+                localStorage.setItem('site_lang', currentLang);
+                applyLanguage(currentLang);
+            });
+        }
+
+        function applyLanguage(lang) {
+            if (lang === 'tr') {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> EN';
+            } else {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> TR';
+            }
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.placeholder = translation; }
+                    else { el.innerHTML = translation; }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
