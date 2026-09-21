@@ -829,6 +829,7 @@ footer {
     #sponsorlar .sponsor-card {
         width: 100% !important;
         max-width: 280px !important;
+        gap: 20px !important;
         height: 120px !important; 
         margin: 0 auto !important;
     }
