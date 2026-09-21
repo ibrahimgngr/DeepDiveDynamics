@@ -54,21 +54,21 @@
 
             <!-- ARAÇ SEÇİCİ MENÜ -->
             <div class="choice-selector">
-                <button class="choice-btn active" data-target="AnaRov">Ana Araç</button>
-                <button class="choice-btn" data-target="MiniRov">Mini ROV</button>
+                <button class="choice-btn active" data-target="Nazlı">Nazlı</button>
+                <button class="choice-btn" data-target="Atılay">Atılay</button>
             </div>
 
             <!-- =========================================
-                 ANA ARAÇ KISMI (AKTİF OLAN)
+                 NAZLI KISMI (AKTİF OLAN)
                  ========================================= -->
-            <div id="AnaRov" class="team-choice-content active">
+            <div id="Nazlı" class="team-choice-content active">
                 <div class="vehicle-showcase">
                     <!-- Üst Kısım: Başlık, Araç Görseli ve Vizyon Yazıları -->
                     <div class="vehicle-header-grid">
                         <!-- Sol: Başlık ve Açıklama -->
                         <div class="vehicle-title-box">
                             <h2 class="vehicle-main-title">DEEP DIVE<br>DYNAMICS</h2>
-                            <h3 class="vehicle-sub-title" data-tr="ANA ARAÇ" data-en="MAIN VEHICLE">ANA ARAÇ</h3>
+                            <h3 class="vehicle-sub-title" data-tr="NAZLI" data-en="NAZLI">NAZLI</h3>
                             <p class="vehicle-desc"
                                 data-tr="Zorlu sualtı görevleri için tasarlanmış, yüksek manevra kabiliyetine sahip, modüler ve güvenilir insansız sualtı aracı."
                                 data-en="Designed for challenging underwater missions, highly maneuverable, modular and reliable unmanned underwater vehicle.">
@@ -102,7 +102,7 @@
 
                         <!-- Orta: Araç Görseli -->
                         <div class="vehicle-image-box">
-                            <img src="images/araclar/ana-arac-render.png" alt="Ana Araç 3D Render">
+                            <img src="images/araclar/nazli-render.png" alt="Nazlı 3D Render">
                         </div>
 
                         <!-- Sağ: Sağ Vizyon Yazıları -->
@@ -130,8 +130,8 @@
                                         <li><span>Uzunluk:</span> 500 mm</li>
                                         <li><span>Yükseklik:</span> 270.99 mm</li>
                                         <li><span>Ağırlık:</span> 7989.06 g</li>
-                                        <li><span>Sistem Durumu:</span> <span data-tr="Ana araç"
-                                                data-en="Main vehicle">Ana araç</span></li>
+                                        <li><span>Sistem Durumu:</span> <span data-tr="Nazlı"
+                                                data-en="Nazlı">Nazlı</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -243,16 +243,16 @@
             </div>
 
             <!-- =========================================
-                 MINI ROV KISMI (GİZLİ BAŞLAR)
+                 ATILAY KISMI (GİZLİ BAŞLAR)
                  ========================================= -->
-            <div id="MiniRov" class="team-choice-content">
+            <div id="Atılay" class="team-choice-content">
                 <div class="vehicle-showcase">
                     <!-- Üst Kısım: Başlık, Araç Görseli ve Vizyon Yazıları -->
                     <div class="vehicle-header-grid">
                         <!-- Sol: Başlık ve Açıklama -->
                         <div class="vehicle-title-box">
                             <h2 class="vehicle-main-title">DEEP DIVE<br>DYNAMICS</h2>
-                            <h3 class="vehicle-sub-title" data-tr="MİNİ ROV" data-en="MINI ROV">MİNİ ROV</h3>
+                            <h3 class="vehicle-sub-title" data-tr="ATILAY" data-en="ATILAY">ATILAY</h3>
                             <p class="vehicle-desc"
                                 data-tr="Kompakt yapısı, yüksek manevra kabiliyetine sahip ve modüler tasarımıyla dar alanlarda çalışmak için geliştirilmiş, güvenilir insansız sualtı aracı."
                                 data-en="Reliable unmanned underwater vehicle developed to work in narrow spaces with its compact structure, high maneuverability and modular design.">
@@ -287,8 +287,7 @@
 
                         <!-- Orta: Araç Görseli -->
                         <div class="vehicle-image-box">
-                            <!-- Mini ROV görselini images/araclar klasörüne bu isimle eklemelisin -->
-                            <img src="images/araclar/mini-rov-render.png" alt="Mini ROV 3D Render">
+                            <img src="images/araclar/atilay-render.png" alt="Atılay 3D Render">
                         </div>
 
                         <!-- Sağ: Sağ Vizyon Yazıları -->
@@ -316,7 +315,8 @@
                                         <li><span>Uzunluk:</span> 366.07 mm</li>
                                         <li><span>Yükseklik:</span> 202 mm</li>
                                         <li><span>Ağırlık:</span> 6147.15 g</li>
-                                        <li><span>Sistem Durumu:</span> Mini ROV</li>
+                                        <li><span>Sistem Durumu:</span> <span data-tr="Atılay"
+                                                data-en="Atılay">Atılay</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -500,8 +500,14 @@
 
                     // Tıklanan butonu ve hedef içeriği aktif yap
                     btn.classList.add('active');
+
+                    // Butondaki data-target ID'sini çek ve HTML ID ile eşleştirerek göster
                     const targetId = btn.getAttribute('data-target');
-                    document.getElementById(targetId).classList.add('active');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.classList.add('active');
+                    }
                 });
             });
         }
