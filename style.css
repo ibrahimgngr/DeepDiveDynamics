@@ -152,11 +152,21 @@ section {
     font-weight: 800;
     margin-bottom: 15px;
     letter-spacing: -2px;
+    text-shadow: 
+        0 0 5px rgba(0, 210, 255, 0.4),
+        0 0 15px rgba(0, 210, 255, 0.2),
+        0 5px 20px rgba(0, 0, 0, 0.9);
 }
 
 #hero p {
     font-size: 1.5rem;
-    color: var(--text-muted);
+    color: #ffffff; /* Yazının ana rengi beyaz */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow: 
+        0 0 5px rgba(0, 210, 255, 0.4),
+        0 0 15px rgba(0, 210, 255, 0.2),
+        0 5px 20px rgba(0, 0, 0, 0.9);
 }
 
 .btn {
