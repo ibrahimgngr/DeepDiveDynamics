@@ -816,18 +816,20 @@ footer {
    MOBİL (TELEFON) UYUMU (RESPONSIVE)
    ========================================= */
 @media (max-width: 768px) {
-    #sponsorlar .grid {
+   #sponsorlar .grid {
         display: flex !important;
         flex-direction: column !important;
+        align-items: center !important;
         width: 100% !important;
-        gap: 20px !important;
+        gap: 15px !important;
         grid-template-columns: none !important;
     }
     
     #sponsorlar .sponsor-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 130px !important; /* Mobilde kart yüksekliğini biraz optimize ettik */
+        width: 90% !important; /* Ekranı tam kaplamaz, kenarlardan pay bırakır */
+        max-width: 320px !important; /* Çok yayvanlaşmasını engeller */
+        height: 120px !important; /* İdeal kart yüksekliği */
+        margin: 0 auto !important;
     }
     #preloader img { width: 80%; }
 
