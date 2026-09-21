@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raporlarımız | Deep Dive Dynamics</title>
+    <meta name="description" content="Deep Dive Dynamics - İnsansız Su Altı Sistemleri.">
+    <meta property="og:title" content="Deep Dive Dynamics">
+    <meta property="og:description"
+        content="İmkansızlıktan imkan yaratanların takımı. Geleceğin otonom su altı araçlarını tasarlıyoruz.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" sizes="192x192" href="images/logo_tek.png">
+    <!-- CSS versiyonunu v=8 yaptık ki yeni ekleyeceğimiz stiller hemen aktif olsun -->
+    <link rel="stylesheet" href="style.css?v=8">
+</head>
+
+<body>
+    <div id="preloader">
+        <img src="images/logo.png" alt="Yükleniyor...">
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Deep Dive Dynamics Logo">
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html" data-tr='<i class="fa-solid fa-house"></i> ANA SAYFA' data-en='<i class="fa-solid fa-house"></i> HOME'><i class="fa-solid fa-house"></i> ANA SAYFA</a>
+            <a href="araclar.html" data-tr="ARAÇLAR" data-en="VEHICLES">ARAÇLAR</a>
+            <a href="hakkimizda.html" data-tr="HAKKIMIZDA" data-en="ABOUT US">HAKKIMIZDA</a>
+            <a href="takimimiz.html" data-tr="TAKIMIMIZ" data-en="OUR TEAM">TAKIMIMIZ</a>
+            <a href="raporlar.html" class="active" data-tr="RAPORLAR" data-en="PAPERS">RAPORLAR</a>
+            <a href="galeri.html" data-tr="GALERİ" data-en="GALLERY">GALERİ</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR8scqBRYS02zoFpXVMVBQeoAkeAK_aq12Xqm8TAhwSs1n3A/viewform" target="_blank" data-tr="BİZE KATILIN" data-en="JOIN US">BİZE KATILIN</a>
+            <a href="sponsorlar.html" data-tr="SPONSORLUK" data-en="SPONSORSHIP">SPONSORLUK</a>
+            <a href="#" id="lang-toggle"><i class="fa-solid fa-globe"></i> EN</a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper">
+        <section id="raporlar" style="padding-top: 0;">
+            <h1 class="section-title" data-tr="TAKIM RAPORLARI" data-en="TEAM PAPERS">TAKIM RAPORLARI</h1>
+            <p class="section-subtitle" data-tr="Araştırma, geliştirme ve sistem tasarım dokümanlarımız." data-en="Our research, development, and system design documents.">Araştırma, geliştirme ve sistem tasarım dokümanlarımız.</p>
+
+            <div class="papers-list">
+                
+              <!-- 1. Rapor Kartı: Kritik Tasarım Raporu (KTR) -->
+                <div class="paper-card">
+                    <h2 class="paper-title">Deep Dive Dynamics TEKNOFEST Kritik Tasarım Raporu 2026</h2>
+                    <p class="paper-desc" 
+                       data-tr="TEKNOFEST 2026 İnsansız Su Altı Sistemleri İleri Kategori için hazırlanan bu rapor; Ana Araç ve Mini ROV sistemlerimizin detaylı mühendislik analizlerini içermektedir. Raporda, basınca dayanıklı şasi tasarımımız, özgün güç dağıtım mimarimiz, 6 serbestlik dereceli (6-DOF) PID kontrol yapımız ve otonom navigasyon algoritmalarımız CFD analizleri ve simülasyon testleriyle desteklenerek sunulmuştur." 
+                       data-en="Prepared for the TEKNOFEST 2026 Unmanned Underwater Systems Competition Advanced Category, this report includes detailed engineering analyses of our Main Vehicle and Mini ROV systems. The document presents our pressure-resistant chassis design, custom power distribution architecture, 6-DOF PID control structure, and autonomous navigation algorithms, validated through CFD analyses and simulation tests.">
+                       TEKNOFEST 2026 İnsansız Su Altı Sistemleri İleri Kategori için hazırlanan bu rapor; Ana Araç ve Mini ROV sistemlerimizin detaylı mühendislik analizlerini içermektedir[cite: 13]. Raporda, basınca dayanıklı şasi tasarımımız, özgün güç dağıtım mimarimiz, 6 serbestlik dereceli (6-DOF) PID kontrol yapımız ve otonom navigasyon algoritmalarımız CFD analizleri ve simülasyon testleriyle desteklenerek sunulmuştur[cite: 13].
+                    </p>
+                    
+                    <a href="raporlar/teknofest-ktr-2026.pdf" target="_blank" class="btn paper-btn">
+                        <span data-tr="Raporu Oku" data-en="Read More">Raporu Oku</span> <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px;"></i>
+                    </a>
+                </div>
+
+                <!-- 2. Rapor Kartı: Teknik Yeterlilik Formu (TYF) -->
+                <div class="paper-card">
+                    <h2 class="paper-title">Deep Dive Dynamics TEKNOFEST Teknik Yeterlilik Formu 2026</h2>
+                    <p class="paper-desc" 
+                       data-tr="TEKNOFEST 2026 ön eleme aşaması kapsamında hazırlanan Teknik Yeterlilik Formu, otonom su altı araçlarımızın temel donanım ve yazılım konseptlerini özetlemektedir. Dokümanda; donanım sensör entegrasyonlarımız, itki sistemlerimiz, haberleşme altyapımız ve otonom görevler için kurguladığımız temel karar-kontrol algoritmalarının iş akış şemaları detaylandırılmaktadır." 
+                       data-en="Prepared within the scope of the TEKNOFEST 2026 preliminary stage, the Technical Qualification Form outlines the core hardware and software concepts of our autonomous underwater vehicles. The document details our sensor integrations, propulsion systems, communication infrastructure, and the workflow diagrams of the fundamental decision-control algorithms designed for autonomous missions.">
+                       TEKNOFEST 2026 ön eleme aşaması kapsamında hazırlanan Teknik Yeterlilik Formu, otonom su altı araçlarımızın temel donanım ve yazılım konseptlerini özetlemektedir[cite: 14]. Dokümanda; donanım sensör entegrasyonlarımız, itki sistemlerimiz, haberleşme altyapımız ve otonom görevler için kurguladığımız temel karar-kontrol algoritmalarının iş akış şemaları detaylandırılmaktadır[cite: 14].
+                    </p>
+                    
+                    <a href="raporlar/teknofest-tyf-2026.pdf" target="_blank" class="btn paper-btn">
+                        <span data-tr="Raporu Oku" data-en="Read More">Raporu Oku</span> <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px;"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/deepdivedynamics/" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/deep-dive-dynamics-aba6392b6/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Copyright &copy; 2026 Deep Dive Dynamics</p>
+    </footer>
+
+    <script>
+        // Yükleme Ekranı ve Menü Kodları
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => { preloader.style.opacity = "0"; preloader.style.visibility = "hidden"; }, 1000);
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenu.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+                }
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Çoklu Dil Motoru
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('[data-tr]');
+        let currentLang = localStorage.getItem('site_lang') || 'tr';
+        applyLanguage(currentLang);
+
+        if (langToggle) {
+            langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentLang = currentLang === 'tr' ? 'en' : 'tr';
+                localStorage.setItem('site_lang', currentLang);
+                applyLanguage(currentLang);
+            });
+        }
+
+        function applyLanguage(lang) {
+            if (lang === 'tr') {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> EN';
+            } else {
+                if (langToggle) langToggle.innerHTML = '<i class="fa-solid fa-globe"></i> TR';
+            }
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.placeholder = translation; }
+                    else { el.innerHTML = translation; }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
