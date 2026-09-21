@@ -674,6 +674,104 @@ footer {
 .footer-socials a:hover .fa-instagram { color: #E1306C; }
 .footer-socials a:hover .fa-linkedin { color: #0077b5; }
 
+/* =========================================
+   ARAMA MOTORU (MODAL) TASARIMI - KÜÇÜLTÜLMÜŞ VERSİYON
+   ========================================= */
+.search-modal {
+    display: none; 
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 15, 25, 0.4); /* Arka plan karartmasını çok azalttık */
+    backdrop-filter: blur(2px); /* Bulanıklığı yok denecek kadar azalttık */
+    animation: fadeIn 0.2s ease;
+}
+
+.search-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 90px; /* Ekranın ortasına değil, menünün hemen altına hizalar */
+}
+
+.search-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--text-muted);
+    font-size: 30px; /* Çarpı ikonunu küçülttük */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-close:hover { color: var(--accent-color); }
+
+.search-modal-content {
+    width: 90%;
+    max-width: 600px; /* Kutunun genişliğini daralttık */
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 15px 25px; /* Kutu içi boşlukları daralttık */
+    font-size: 1.1rem; /* Yazı boyutunu normalleştirdik */
+    background-color: rgba(38, 48, 75, 0.95); /* Kutuyu hafif saydam yaptık */
+    border: 1px solid rgba(0, 210, 255, 0.3); /* Kenarlığı incelttik */
+    color: var(--text-light);
+    border-radius: 30px; 
+    outline: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Havada duruyormuş hissi (gölge) */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+.search-results {
+    margin-top: 15px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Sonuçlar arası boşluğu daralttık */
+    max-height: 45vh; /* Liste çok uzarsa aşağı kaydırma çubuğu çıkarır */
+    overflow-y: auto;
+}
+
+/* Kaydırma Çubuğu Tasarımı */
+.search-results::-webkit-scrollbar { width: 6px; }
+.search-results::-webkit-scrollbar-thumb { background-color: var(--accent-color); border-radius: 10px; }
+
+.search-result-item {
+    background-color: rgba(38, 48, 75, 0.95);
+    padding: 15px 20px; /* Kart iç boşluğunu küçülttük */
+    border-radius: 8px;
+    text-decoration: none;
+    border-left: 3px solid var(--accent-color);
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.search-result-item:hover {
+    transform: translateX(5px);
+    background-color: var(--surface-hover);
+}
+
+.search-result-item h3 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.search-result-item p {
+    color: var(--text-muted);
+    font-size: 0.85rem; /* Açıklama yazılarını küçülttük */
+}
+
 
 /* =========================================
    ORTA BOY EKRAN (TABLET & LAPTOP) UYUMU
