@@ -821,16 +821,18 @@ footer {
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
-        gap: 15px !important;
+        gap: 20px !important;
         grid-template-columns: none !important;
+        padding: 0 20px !important; 
     }
     
     #sponsorlar .sponsor-card {
-        width: 90% !important; /* Ekranı tam kaplamaz, kenarlardan pay bırakır */
-        max-width: 320px !important; /* Çok yayvanlaşmasını engeller */
-        height: 120px !important; /* İdeal kart yüksekliği */
+        width: 100% !important;
+        max-width: 280px !important;
+        height: 120px !important; 
         margin: 0 auto !important;
     }
+    
     #preloader img { width: 80%; }
 
     /* Menü Ayarları */
