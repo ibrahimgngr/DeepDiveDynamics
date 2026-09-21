@@ -816,10 +816,7 @@ footer {
    MOBİL (TELEFON) UYUMU (RESPONSIVE)
    ========================================= */
 @media (max-width: 768px) {
-    #sponsorlar .grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
+    #preloader img { width: 80%; }
 
     /* Menü Ayarları */
     header {
