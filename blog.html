@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Deep Dive Dynamics</title>
+    <meta name="description" content="Deep Dive Dynamics - İnsansız Su Altı Sistemleri">
+    <meta name="author" content="İbrahim Güngör">
+    <meta property="og:title" content="Deep Dive Dynamics">
+    <meta property="og:description" content="Tasarımdan havuz testlerine kadar mühendislik çalışmalarımızı keşfedin.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" sizes="192x192" href="images/logo_tek.png">
+    <link rel="stylesheet" href="style.css?v=9">
+</head>
+
+<body>
+    <div id="preloader"><img src="images/logo.png" alt="Yükleniyor..."></div>
+
+    <header>
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Deep Dive Dynamics Logo"></a></div>
+        <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+        <nav id="nav-menu">
+            <a href="index.html" data-tr='<i class="fa-solid fa-house"></i> ANA SAYFA'
+                data-en='<i class="fa-solid fa-house"></i> HOME'><i class="fa-solid fa-house"></i> ANA SAYFA</a>
+            <a href="araclar.html" data-tr="ARAÇLAR" data-en="VEHICLES">ARAÇLAR</a>
+            <a href="hakkimizda.html" data-tr="HAKKIMIZDA" data-en="ABOUT US">HAKKIMIZDA</a>
+            <a href="takimimiz.html" data-tr="TAKIMIMIZ" data-en="OUR TEAM">TAKIMIMIZ</a>
+            <a href="raporlar.html" data-tr="RAPORLAR" data-en="PAPERS">RAPORLAR</a>
+            <a href="galeri.html" data-tr="GALERİ" data-en="GALLERY">GALERİ</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScR8scqBRYS02zoFpXVMVBQeoAkeAK_aq12Xqm8TAhwSs1n3A/viewform"
+                target="_blank" data-tr="BİZE KATILIN" data-en="JOIN US">BİZE KATILIN</a>
+            <a href="sponsorlar.html" data-tr="SPONSORLUK" data-en="SPONSORSHIP">SPONSORLUK</a>
+            <a href="#" id="lang-toggle"><i class="fa-solid fa-globe"></i> EN</a>
+            <a href="#" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </nav>
+    </header>
+
+    <div class="page-wrapper devblog-page">
+        <section class="devblog-hero">
+            <span class="devblog-kicker" data-tr="2026 / 2027 SEZONU" data-en="2026 / 2027 SEASON">2026 / 2027
+                SEZONU</span>
+            <h1 data-tr="Geliştirme Günlüğü" data-en="Development Blog">Geliştirme Günlüğü</h1>
+            <p data-tr="Deep Dive Dynamics'in tasarımdan üretime, yazılımdan havuz testlerine uzanan geliştirme sürecinin perde arkası."
+                data-en="Behind the scenes of Deep Dive Dynamics' development journey, from design and manufacturing to software and pool testing.">
+                Deep Dive Dynamics'in tasarımdan üretime, yazılımdan havuz testlerine uzanan geliştirme sürecinin perde
+                arkası.
+            </p>
+            <div class="devblog-phase-nav">
+                <a href="#phase-1" data-tr="Tasarım & Sistem Mimarisi" data-en="Design & System Architecture">Tasarım & Sistem Mimarisi</a>
+                <a href="#phase-2" data-tr="Alt Sistem Geliştirme" data-en="Subsystem Development">Alt Sistem Geliştirme</a>
+                <a href="#phase-3" data-tr="Entegrasyon & Havuz Testleri" data-en="Integration & Pool Testing">Entegrasyon & Havuz Testleri</a>
+            </div>
+        </section>
+
+        <main class="devblog-container">
+            <section class="devblog-phase" id="phase-1">
+                <div class="devblog-phase-heading">
+                    <span>01</span>
+                    <div>
+                        <h2 data-tr="Tasarım & Sistem Mimarisi" data-en="Design & System Architecture">Tasarım & Sistem
+                            Mimarisi</h2>
+                        <small
+                            data-tr="Görev: Araç gereksinimlerini belirlemek, mekanik-elektronik-yazılım mimarisini oluşturmak ve sezon geliştirme planını netleştirmek."
+                            data-en="Mission: Define vehicle requirements, establish the mechanical-electrical-software architecture and clarify the season development plan.">
+                            Görev: Araç gereksinimlerini belirlemek, mekanik-elektronik-yazılım mimarisini oluşturmak ve
+                            sezon geliştirme planını netleştirmek.
+                        </small>
+                    </div>
+                </div>
+
+                <article class="devblog-entry">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="TAKIM & PLANLAMA" data-en="TEAM & PLANNING">TAKIM &
+                            PLANLAMA</span>
+                        <h3 data-tr="Yeni Sezon, Yeni Hedefler" data-en="New Season, New Targets">Yeni Sezon, Yeni
+                            Hedefler</h3>
+                        <div class="devblog-meta">Deep Dive Dynamics · 2026/2027</div>
+                        <p data-tr="Yeni sezon çalışmalarına yarışma görevlerinin analizi, mevcut aracın yeteneklerinin değerlendirilmesi ve geliştirilmesi gereken alt sistemlerin belirlenmesiyle başladık. RoboSub görevleri için mekanik, elektronik ve yazılım ekiplerinin ortak çalışacağı bir geliştirme yol haritası oluşturduk."
+                            data-en="We started the new season by analysing competition missions, evaluating the current vehicle capabilities and identifying subsystems that need improvement. We created a development roadmap where mechanical, electronics and software teams work together for RoboSub missions.">
+                            Yeni sezon çalışmalarına yarışma görevlerinin analizi, mevcut aracın yeteneklerinin
+                            değerlendirilmesi ve geliştirilmesi gereken alt sistemlerin belirlenmesiyle başladık.
+                            RoboSub görevleri için mekanik, elektronik ve yazılım ekiplerinin ortak çalışacağı bir
+                            geliştirme yol haritası oluşturduk.
+                        </p>
+                    </div>
+                    <div class="devblog-media">
+                        <img src="images/galeri/galeri0.jpeg" alt="Deep Dive Dynamics takım çalışması">
+                    </div>
+                </article>
+
+                <article class="devblog-entry reverse">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="MEKANİK TASARIM" data-en="MECHANICAL DESIGN">MEKANİK
+                            TASARIM</span>
+                        <h3 data-tr="Araç Yerleşimi ve Modüler Tasarım" data-en="Vehicle Layout and Modular Design">Araç
+                            Yerleşimi ve Modüler Tasarım</h3>
+                        <div class="devblog-meta">Mekanik Birimi · 2026/2027</div>
+                        <p data-tr="Yeni görev gereksinimleri doğrultusunda şasi, basınç tüpleri, motor yerleşimleri ve görev mekanizmalarının araç üzerindeki konumları yeniden değerlendirildi. Amaç; bakım kolaylığı, dengeli ağırlık dağılımı ve görev mekanizmalarının hızlı değiştirilebildiği modüler bir platform oluşturmak."
+                            data-en="The chassis, pressure housings, thruster positions and mission mechanisms were re-evaluated according to new mission requirements. The aim is a modular platform with easy maintenance, balanced weight distribution and quickly interchangeable mission mechanisms.">
+                            Yeni görev gereksinimleri doğrultusunda şasi, basınç tüpleri, motor yerleşimleri ve görev
+                            mekanizmalarının araç üzerindeki konumları yeniden değerlendirildi. Amaç; bakım kolaylığı,
+                            dengeli ağırlık dağılımı ve görev mekanizmalarının hızlı değiştirilebildiği modüler bir
+                            platform oluşturmak.
+                        </p>
+                    </div>
+                    <div class="devblog-media">
+                        <img src="images/araclar/nazli-render.png" alt="AUV mekanik tasarım renderı">
+                    </div>
+                </article>
+            </section>
+
+            <section class="devblog-phase" id="phase-2">
+                <div class="devblog-phase-heading">
+                    <span>02</span>
+                    <div>
+                        <h2 data-tr="Alt Sistem Geliştirme" data-en="Subsystem Development">Alt Sistem Geliştirme</h2>
+                        <small
+                            data-tr="Görev: Sensör, güç, kontrol, görüntü işleme ve görev mekanizmalarını bağımsız olarak geliştirip doğrulamak."
+                            data-en="Mission: Develop and validate sensors, power, control, computer vision and mission mechanisms independently.">
+                            Görev: Sensör, güç, kontrol, görüntü işleme ve görev mekanizmalarını bağımsız olarak
+                            geliştirip doğrulamak.
+                        </small>
+                    </div>
+                </div>
+
+                <article class="devblog-entry">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="ELEKTRONİK" data-en="ELECTRONICS">ELEKTRONİK</span>
+                        <h3 data-tr="Güç ve Sensör Mimarisi" data-en="Power and Sensor Architecture">Güç ve Sensör
+                            Mimarisi</h3>
+                        <div class="devblog-meta">Elektronik Birimi · 2026/2027</div>
+                        <p data-tr="Ana işlemci, Pixhawk, derinlik ve mesafe sensörleri, kamera, ESC'ler ve güç dağıtım sistemi tek bir mimaride toplandı. Haberleşme hatları ile güç bağlantıları sadeleştirilerek bakım ve hata tespiti kolaylaştırıldı."
+                            data-en="The main computer, Pixhawk, depth and distance sensors, camera, ESCs and power distribution system were brought together in a single architecture. Communication and power connections were simplified to improve maintenance and troubleshooting.">
+                            Ana işlemci, Pixhawk, derinlik ve mesafe sensörleri, kamera, ESC'ler ve güç dağıtım sistemi
+                            tek bir mimaride toplandı. Haberleşme hatları ile güç bağlantıları sadeleştirilerek bakım ve
+                            hata tespiti kolaylaştırıldı.
+                        </p>
+                    </div>
+                    <div class="devblog-media media-placeholder">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span data-tr="Elektronik geliştirme fotoğrafı"
+                            data-en="Electronics development photo">Elektronik geliştirme fotoğrafı</span>
+                    </div>
+                </article>
+
+                <article class="devblog-entry reverse">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="YAZILIM & OTONOMİ" data-en="SOFTWARE & AUTONOMY">YAZILIM &
+                            OTONOMİ</span>
+                        <h3 data-tr="PID Kontrol ve Otonom Görev Altyapısı"
+                            data-en="PID Control and Autonomous Mission Stack">PID Kontrol ve Otonom Görev Altyapısı
+                        </h3>
+                        <div class="devblog-meta">Yazılım Birimi · 2026/2027</div>
+                        <p data-tr="Derinlik, pitch, roll ve yaw kontrolü için PID tabanlı hareket kontrol altyapısı geliştirildi. Görüntü işleme, sensör verileri ve görev durum makineleri aynı karar yapısında birleştirilerek aracın görevleri insan müdahalesi olmadan tamamlaması hedeflendi."
+                            data-en="A PID-based motion-control stack was developed for depth, pitch, roll and yaw. Computer vision, sensor data and mission state machines were combined in the same decision architecture so the vehicle can complete missions without human intervention.">
+                            Derinlik, pitch, roll ve yaw kontrolü için PID tabanlı hareket kontrol altyapısı
+                            geliştirildi. Görüntü işleme, sensör verileri ve görev durum makineleri aynı karar yapısında
+                            birleştirilerek aracın görevleri insan müdahalesi olmadan tamamlaması hedeflendi.
+                        </p>
+                    </div>
+                    <div class="devblog-media media-placeholder">
+                        <i class="fa-solid fa-code"></i>
+                        <span data-tr="Yazılım geliştirme / arayüz görüntüsü"
+                            data-en="Software development / interface image">Yazılım geliştirme / arayüz
+                            görüntüsü</span>
+                    </div>
+                </article>
+
+                <article class="devblog-entry">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="GÖRÜNTÜ İŞLEME" data-en="COMPUTER VISION">GÖRÜNTÜ
+                            İŞLEME</span>
+                        <h3 data-tr="Görev Nesnelerinin Algılanması" data-en="Mission Object Detection">Görev
+                            Nesnelerinin Algılanması</h3>
+                        <div class="devblog-meta">Yazılım Birimi · 2026/2027</div>
+                        <p data-tr="Kapı, slalom engelleri ve torpido hedeflerinin kameradan tespit edilmesi için görüntü işleme algoritmaları geliştiriyoruz. Algılanan hedefin görüntü merkezine göre konumu, aracın hizalanma ve yaklaşma komutlarının üretilmesinde kullanılıyor."
+                            data-en="We are developing computer-vision algorithms to detect the gate, slalom obstacles and torpedo targets from the camera feed. The target position relative to the image centre is used to generate alignment and approach commands.">
+                            Kapı, slalom engelleri ve torpido hedeflerinin kameradan tespit edilmesi için görüntü işleme
+                            algoritmaları geliştiriyoruz. Algılanan hedefin görüntü merkezine göre konumu, aracın
+                            hizalanma ve yaklaşma komutlarının üretilmesinde kullanılıyor.
+                        </p>
+                    </div>
+                    <div class="devblog-media media-placeholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span data-tr="Görüntü işleme test çıktısı" data-en="Computer vision test output">Görüntü işleme
+                            test çıktısı</span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="devblog-phase" id="phase-3">
+                <div class="devblog-phase-heading">
+                    <span>03</span>
+                    <div>
+                        <h2 data-tr="Entegrasyon & Havuz Testleri" data-en="Integration & Pool Testing">Entegrasyon &
+                            Havuz Testleri</h2>
+                        <small
+                            data-tr="Görev: Alt sistemleri tek araç üzerinde birleştirmek, gerçek sualtı koşullarında test etmek ve görev performansını iteratif olarak iyileştirmek."
+                            data-en="Mission: Integrate all subsystems on one vehicle, test them in real underwater conditions and iteratively improve mission performance.">
+                            Görev: Alt sistemleri tek araç üzerinde birleştirmek, gerçek sualtı koşullarında test etmek
+                            ve görev performansını iteratif olarak iyileştirmek.
+                        </small>
+                    </div>
+                </div>
+
+                <article class="devblog-entry">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="SİSTEM ENTEGRASYONU" data-en="SYSTEM INTEGRATION">SİSTEM
+                            ENTEGRASYONU</span>
+                        <h3 data-tr="Araç İlk Kez Tam Sistem Olarak Çalışıyor"
+                            data-en="Vehicle Runs as a Complete System">Araç İlk Kez Tam Sistem Olarak Çalışıyor</h3>
+                        <div class="devblog-meta">Deep Dive Dynamics · 2026/2027</div>
+                        <p data-tr="Mekanik, elektronik ve yazılım alt sistemleri aynı araç üzerinde birleştirilerek haberleşme, güç dağıtımı, sensör verisi ve motor kontrol zinciri uçtan uca doğrulandı. Bu aşama, havuz testlerine geçmeden önce sistem seviyesindeki kritik hataların görülmesini sağlıyor."
+                            data-en="Mechanical, electronics and software subsystems were integrated on the same vehicle and the full communication, power, sensing and motor-control chain was validated end-to-end. This stage helps reveal system-level issues before pool testing.">
+                            Mekanik, elektronik ve yazılım alt sistemleri aynı araç üzerinde birleştirilerek haberleşme,
+                            güç dağıtımı, sensör verisi ve motor kontrol zinciri uçtan uca doğrulandı. Bu aşama, havuz
+                            testlerine geçmeden önce sistem seviyesindeki kritik hataların görülmesini sağlıyor.
+                        </p>
+                    </div>
+                    <div class="devblog-media">
+                        <img src="images/galeri/galeri5.jpeg" alt="AUV sistem entegrasyonu">
+                    </div>
+                </article>
+
+                <article class="devblog-entry reverse">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="HAVUZ TESTİ" data-en="POOL TEST">HAVUZ TESTİ</span>
+                        <h3 data-tr="PID Ayarları ve Manevra Testleri" data-en="PID Tuning and Maneuver Tests">PID
+                            Ayarları ve Manevra Testleri</h3>
+                        <div class="devblog-meta">Test Ekibi · 2026/2027</div>
+                        <p data-tr="Derinlik sabitleme, yönelim kontrolü ve yatay hareket davranışları kontrollü havuz testleriyle ölçülüyor. Her testten alınan veriler PID parametrelerinin, motor komutlarının ve araç dengesinin bir sonraki iterasyonda iyileştirilmesi için kullanılıyor."
+                            data-en="Depth holding, attitude control and horizontal motion are measured through controlled pool tests. Data from every test is used to improve PID parameters, thruster commands and vehicle balance in the next iteration.">
+                            Derinlik sabitleme, yönelim kontrolü ve yatay hareket davranışları kontrollü havuz
+                            testleriyle ölçülüyor. Her testten alınan veriler PID parametrelerinin, motor komutlarının
+                            ve araç dengesinin bir sonraki iterasyonda iyileştirilmesi için kullanılıyor.
+                        </p>
+                    </div>
+                    <div class="devblog-media">
+                        <img src="images/galeri/galeri10.jpeg" alt="Deep Dive Dynamics havuz testi">
+                    </div>
+                </article>
+
+                <article class="devblog-entry">
+                    <div class="devblog-copy">
+                        <span class="devblog-tag" data-tr="GÖREV TESTLERİ" data-en="MISSION TESTING">GÖREV
+                            TESTLERİ</span>
+                        <h3 data-tr="RoboSub Görev Zincirleri" data-en="RoboSub Mission Sequences">RoboSub Görev
+                            Zincirleri</h3>
+                        <div class="devblog-meta">Deep Dive Dynamics · 2026/2027</div>
+                        <p data-tr="Gate, Avoid Debris, Torpedo ve başlangıç kapısına dönüş gibi görevleri tek tek doğruladıktan sonra görevleri ardışık senaryolarda birleştiriyoruz. Böylece yalnızca tek bir algoritmanın değil, aracın bütün otonom görev zincirinin güvenilirliğini ölçüyoruz."
+                            data-en="After validating missions such as Gate, Avoid Debris, Torpedo and Start Gate Return individually, we combine them into sequential scenarios. This lets us evaluate the reliability of the entire autonomous mission chain rather than a single algorithm.">
+                            Gate, Avoid Debris, Torpedo ve başlangıç kapısına dönüş gibi görevleri tek tek doğruladıktan
+                            sonra görevleri ardışık senaryolarda birleştiriyoruz. Böylece yalnızca tek bir algoritmanın
+                            değil, aracın bütün otonom görev zincirinin güvenilirliğini ölçüyoruz.
+                        </p>
+                    </div>
+                    <div class="devblog-media media-placeholder">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                        <span data-tr="Görev testi fotoğrafı / videosu" data-en="Mission test photo / video">Görev testi
+                            fotoğrafı / videosu</span>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <div id="search-modal" class="search-modal">
+        <span class="search-close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="search-modal-content">
+            <input type="text" id="search-input" placeholder="Sitede ne arıyorsunuz?" data-tr="Sitede ne arıyorsunuz?"
+                data-en="What are you looking for?">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/deepdivedynamics/" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/deep-dive-dynamics-aba6392b6/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:gungoribrahim485@gmail.com" target="_blank" aria-label="Mail"><i
+                    class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>Copyright &copy; 2026 Deep Dive Dynamics</p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => { preloader.style.opacity = "0"; preloader.style.visibility = "hidden"; }, 650);
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenu.querySelector('i');
+                icon.classList.toggle('fa-bars', !navMenu.classList.contains('active'));
+                icon.classList.toggle('fa-xmark', navMenu.classList.contains('active'));
+            });
+        }
+
+        const langToggle = document.getElementById('lang-toggle');
+        const translatableElements = document.querySelectorAll('[data-tr]');
+        let currentLang = localStorage.getItem('site_lang') || 'tr';
+        applyLanguage(currentLang);
+        langToggle?.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentLang = currentLang === 'tr' ? 'en' : 'tr';
+            localStorage.setItem('site_lang', currentLang);
+            applyLanguage(currentLang);
+        });
+        function applyLanguage(lang) {
+            if (langToggle) langToggle.innerHTML = `<i class="fa-solid fa-globe"></i> ${lang === 'tr' ? 'EN' : 'TR'}`;
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (!translation) return;
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translation;
+                else el.innerHTML = translation;
+            });
+        }
+
+        const searchBtn = document.getElementById('search-btn');
+        const searchModal = document.getElementById('search-modal');
+        const searchClose = document.querySelector('.search-close');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const sitePages = ['index.html', 'araclar.html', 'hakkimizda.html', 'blog.html', 'takimimiz.html', 'raporlar.html', 'galeri.html', 'sponsorlar.html'];
+        let siteCache = [];
+
+        async function loadSiteData() {
+            if (siteCache.length) return;
+            for (const url of sitePages) {
+                try {
+                    const response = await fetch(url);
+                    const htmlText = await response.text();
+                    const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+                    doc.querySelectorAll('script, style, nav, footer, #search-modal').forEach(el => el.remove());
+                    siteCache.push({ url, title: doc.title.split('|')[0].trim(), dom: doc.body });
+                } catch (err) { console.log(url + ' yüklenirken hata oluştu.'); }
+            }
+        }
+
+        searchBtn?.addEventListener('click', async e => {
+            e.preventDefault();
+            searchModal.classList.add('active');
+            searchInput.focus();
+            searchResults.innerHTML = '<p style="color:var(--text-muted);text-align:center;margin-top:20px;"><i class="fa-solid fa-spinner fa-spin"></i> Site içerikleri taranıyor...</p>';
+            await loadSiteData();
+            searchResults.innerHTML = '';
+            if (searchInput.value) triggerSearch(searchInput.value);
+        });
+        searchClose?.addEventListener('click', () => { searchModal.classList.remove('active'); searchInput.value = ''; searchResults.innerHTML = ''; });
+        searchModal?.addEventListener('click', e => { if (e.target === searchModal) searchClose.click(); });
+        searchInput?.addEventListener('input', function () { if (siteCache.length) triggerSearch(this.value); });
+
+        function triggerSearch(query) {
+            query = query.toLowerCase().trim(); searchResults.innerHTML = ''; if (query.length < 2) return;
+            let count = 0;
+            siteCache.forEach(page => {
+                const unique = new Set();
+                page.dom.querySelectorAll('h1,h2,h3,h4,p,a,span,li,strong').forEach(el => {
+                    const tr = el.getAttribute('data-tr') || '', en = el.getAttribute('data-en') || '', text = el.textContent || '';
+                    const hay = (text + ' ' + tr + ' ' + en).toLowerCase().replace(/\s+/g, ' ').trim();
+                    if (!hay.includes(query)) return;
+                    let shown = (en.toLowerCase().includes(query) ? en : (tr.toLowerCase().includes(query) ? tr : text)).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+                    if (!shown || unique.has(shown)) return; unique.add(shown);
+                    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                    shown = shown.slice(0, 150).replace(regex, '<strong style="color:#000;background:var(--accent-color);padding:0 3px;border-radius:3px;">$1</strong>');
+                    searchResults.insertAdjacentHTML('beforeend', `<a href="${page.url}?q=${encodeURIComponent(query)}" class="search-result-item"><h3 style="font-size:.85rem;color:#fff;margin-bottom:8px;text-transform:uppercase;"><i class="fa-solid fa-file-lines" style="margin-right:8px;color:var(--accent-color);"></i>${page.title}</h3><p>${shown}</p></a>`); count++;
+                });
+            });
+            if (!count) searchResults.innerHTML = `<p style="color:var(--text-muted);text-align:center;margin-top:20px;">"${query}" ile ilgili sonuç bulunamadı.</p>`;
+        }
+    </script>
+</body>
+
+</html>
