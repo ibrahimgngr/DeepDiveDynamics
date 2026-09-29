@@ -540,9 +540,12 @@ section {
 /* =========================================
    TAKIM KARTLARI BÖLÜMÜ
    ========================================= */
+/* =========================================
+   TAKIM KARTLARI BÖLÜMÜ (AKILLI DİZİLİM EKLENDİ)
+   ========================================= */
 .team-member {
-    width: calc((100% - 60px) / 4) !important;
-    max-width: 240px;
+    width: 240px !important; /* Yüzdelik yerine sabit genişlik vererek esnemesini sağladık */
+    max-width: 100%;
 }
 
 .team-member .card-content {
@@ -582,8 +585,26 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1040px;
+    max-width: 1040px; /* Varsayılan: yan yana 4 tane sığar */
     margin: 0 auto 60px auto;
+}
+
+/* 
+   AKILLI DİZİLİM (SMART WRAPPING) MANTIĞI 
+   Kapsayıcının içindeki eleman sayısını sayarak satır genişliğini otomatik ayarlar 
+*/
+
+/* Grupta tam 5 veya 6 kişi varsa -> 3 üstte, 2 veya 3 altta olacak şekilde daraltır */
+.team-otomatik:has(> .team-member:nth-child(5):last-child),
+.team-otomatik:has(> .team-member:nth-child(6):last-child),
+.team-otomatik:has(> .team-member:nth-child(9):last-child){
+    max-width: 760px; /* 3 kart + boşluklar kadar yer kaplar */
+}
+
+/* Grupta tam 7 veya 8 kişi varsa -> 4 üstte, 3 veya 4 altta olacak şekilde genişletir */
+.team-otomatik:has(> .team-member:nth-child(7):last-child),
+.team-otomatik:has(> .team-member:nth-child(8):last-child) {
+    max-width: 1020px; /* 4 kart + boşluklar kadar yer kaplar */
 }
 
 .link {
