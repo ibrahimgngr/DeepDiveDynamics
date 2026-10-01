@@ -562,7 +562,7 @@ section {
     height: 140px;
     object-fit: cover;
     object-position: top;
-    border-radius: 50%;
+    border-radius: 5%;
     margin: 25px auto 0;
     display: block;
     border: none;
