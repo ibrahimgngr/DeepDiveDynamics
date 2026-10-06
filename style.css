@@ -172,7 +172,6 @@ section {
 #hero p {
     font-size: 1.5rem;
     color: #ffffff;
-    /* Yazının ana rengi beyaz */
     font-weight: 600;
     letter-spacing: 1.5px;
     text-shadow:
@@ -198,23 +197,201 @@ section {
 }
 
 /* =========================================
+   ANA EKRAN KAYAN YAZI (TICKER) BÖLÜMÜ
+   ========================================= */
+.news-ticker {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(11, 15, 25, 0.9);
+    padding: 12px 0;
+    z-index: 10;
+    display: flex;
+    white-space: nowrap;
+}
+
+/* Sonsuz akış animasyonu */
+.ticker-content {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    animation: tickerScroll 30s linear infinite;
+}
+.ticker-logo {
+    height: 45px; 
+    width: auto; 
+    object-fit:contain;
+    margin-left: 30px; 
+    margin-right: 5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)); /* Logoya hafif bir parlaklık katar */
+}
+
+/* Kayan yazının kendi stili */
+.marque {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Yazılar arasına koyduğumuz "///" ayracının stili */
+.marque-divider {
+    color: var(--text-muted);
+    margin: 0 40px;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+/* Kaydırma Motoru (Animasyon) */
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* =========================================
    GENEL KART SİSTEMİ (PROJELER, BAŞARILAR)
    ========================================= */
-.timeline {
+.achievement-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 40px 0;
 }
 
-.award-card {
-    background-color: var(--surface-color);
-    padding: 30px;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 4px;
+.achievement-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(38, 48, 75, 0.4), rgba(11, 15, 25, 0.8));
+    border: 1px solid rgba(0, 210, 255, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 850px;
+    width: 100%;
+    gap: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.muted-text {
+/* Sol taraftaki neon mavi şerit efekti */
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 20px 45px rgba(0, 210, 255, 0.15);
+}
+
+/* Kupa İkonunun Kutusu */
+.achievement-icon img {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+    border-color: rgba(0, 210, 255, 0.8);
+}
+
+.achievement-icon i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5));
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.achievement-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Sarı Madalya Etiketi */
+.achievement-badge {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+    color: #ffd700;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.achievement-content h4 {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* "İleri Kategori" yazısının stili */
+.achievement-content h4 span {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.achievement-desc {
     color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Telefonlar İçin Mobil Uyum (Responsive) */
+@media (max-width: 768px) {
+    .achievement-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 25px;
+        gap: 25px;
+    }
+    .achievement-header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .achievement-card::before {
+        width: 100%;
+        height: 4px;
+    }
 }
 
 .grid {
@@ -229,7 +406,6 @@ section {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.02);
     overflow: hidden;
 }
 
@@ -242,7 +418,6 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .card-content {
@@ -251,7 +426,7 @@ section {
 
 .card-content h3 {
     font-size: 1.2rem;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     color: var(--text-light);
 }
 
@@ -540,11 +715,8 @@ section {
 /* =========================================
    TAKIM KARTLARI BÖLÜMÜ
    ========================================= */
-/* =========================================
-   TAKIM KARTLARI BÖLÜMÜ (AKILLI DİZİLİM EKLENDİ)
-   ========================================= */
 .team-member {
-    width: 240px !important; /* Yüzdelik yerine sabit genişlik vererek esnemesini sağladık */
+    width: 260px !important; /* Yüzdelik yerine sabit genişlik vererek esnemesini sağladık */
     max-width: 100%;
 }
 
@@ -558,10 +730,10 @@ section {
 }
 
 .team-member img {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     border-radius: 5%;
     margin: 25px auto 0;
     display: block;
@@ -579,13 +751,12 @@ section {
     max-width: 100%;
 }
 
-.team-grid-3,
 .team-otomatik {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1040px; /* Varsayılan: yan yana 4 tane sığar */
+    max-width: 1100px; /* Varsayılan: yan yana 4 tane sığar */
     margin: 0 auto 60px auto;
 }
 
@@ -598,28 +769,37 @@ section {
 .team-otomatik:has(> .team-member:nth-child(5):last-child),
 .team-otomatik:has(> .team-member:nth-child(6):last-child),
 .team-otomatik:has(> .team-member:nth-child(9):last-child){
-    max-width: 760px; /* 3 kart + boşluklar kadar yer kaplar */
+    max-width: 900px; /* 3 kart + boşluklar kadar yer kaplar */
 }
 
 /* Grupta tam 7 veya 8 kişi varsa -> 4 üstte, 3 veya 4 altta olacak şekilde genişletir */
 .team-otomatik:has(> .team-member:nth-child(7):last-child),
 .team-otomatik:has(> .team-member:nth-child(8):last-child) {
-    max-width: 1020px; /* 4 kart + boşluklar kadar yer kaplar */
+    max-width: 1100px; /* 4 kart + boşluklar kadar yer kaplar */
 }
 
 .link {
     display: inline-block;
     margin-top: 15px;
+    margin-right:5px;
 }
 
 .link i {
-    font-size: 26px;
+    font-size: 20px;
     color: #ffffff;
     transition: transform 0.3s, color 0.3s;
 }
 
-.link:hover i {
+.link:hover .fa-linkedin {
     color: #0077b5;
+    transform: scale(1.2);
+}
+.link:hover .fa-github {
+    color: #333333;
+    transform: scale(1.2);
+}
+.link:hover .fa-envelope {
+    color: grey;
     transform: scale(1.2);
 }
 
@@ -641,7 +821,6 @@ section {
     color: var(--text-light);
     font-size: 1.8rem;
     margin-bottom: 20px;
-    border-left: 4px solid var(--accent-color);
     padding-left: 15px;
 }
 
@@ -656,7 +835,6 @@ section {
     background-color: var(--surface-color);
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.02);
     transition: transform 0.3s;
 }
 
@@ -719,7 +897,6 @@ section {
     padding: 50px;
     background: linear-gradient(rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.9)), url('images/araclar/araclar_bagli.png') center/cover;
     border-radius: 8px;
-    border: 1px solid rgba(0, 210, 255, 0.2);
 }
 
 .visionary-ending p {
@@ -959,7 +1136,6 @@ section {
 footer {
     text-align: center;
     padding: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
     font-size: 0.9rem;
 }
@@ -990,7 +1166,14 @@ footer {
 .footer-socials a:hover .fa-envelope {
     color: grey;
 }
-
+.footer-ibrahim {
+    opacity: 0; /* Yazıyı tamamen görünmez yapar ama kapladığı alanı korur */
+    cursor:none; /* Üzerine gelindiğinde link imleci (el) çıkmaz, kimse şüphelenmez */
+    user-select: none; /* Fareyle metin taraması yapıldığında kazara seçilip mavi olmasını engeller */
+    transition: opacity 0.5s ease; /* Yavaşça, şık bir şekilde belirmesini sağlar */
+    outline: none; /* Tıklandığında etrafında varsayılan tarayıcı çerçevesinin çıkmasını önler */
+    display: inline-block;
+}
 /* =========================================
    ARAMA MOTORU (MODAL) TASARIMI - KÜÇÜLTÜLMÜŞ VERSİYON
    ========================================= */
